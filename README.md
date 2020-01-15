@@ -27,28 +27,28 @@ Things you may want to cover:
 
 | Column | Type | Options |
 |:-------|:-----|:-------:|
-| name | string ||
-| email | string ||
-| password | string ||
+| name | string | null: false, unique: true |
+| email | string |null: false, unique: true |
+| password | string |null: false|
 
 ## groups table
 
 | Column | Type | Options |
 |:-------|:----:|:-------:|
-| group_name | string ||
+| group_name | string |null: false|
 
 ## messages table
 
 | Column | Type | Options |
 |:-------|:----:|:-------:|
-| body | text ||
-| image | string ||
-| group_id | integer ||
-| user_id | integer ||
+| body | text |null: false|
+| image | string |null: false|
+| group_id | integer |null: false, foreign_key: true|
+| user_id | integer |null: false, foreign_key: true|
 
 ## users_groups table
 
 | Column | Type | Options |
 |:-------|:-----|:--------|
-| user_id | integer ||
-| group_id | integer ||
+| user_id | integer |null: false, foreign_key: true|
+| group_id | integer |null: false, foreign_key: true|
