@@ -22,3 +22,33 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## users table
+
+| Column | Type | Options |
+|:-------|:-----|:-------:|
+| name | string ||
+| email | string ||
+| password | string ||
+
+## groups table
+
+| Column | Type | Options |
+|:-------|:----:|:-------:|
+| group_name | string ||
+
+## messages table
+
+| Column | Type | Options |
+|:-------|:----:|:-------:|
+| body | text ||
+| image | string ||
+| group_id | integer ||
+| user_id | integer ||
+
+## users_groups table
+
+| Column | Type | Options |
+|:-------|:-----|:--------|
+| user_id | integer ||
+| group_id | integer ||
