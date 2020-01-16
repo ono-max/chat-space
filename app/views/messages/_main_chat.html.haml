@@ -1,4 +1,8 @@
-%div.wrapper__chat-main
-  %div.wrapper__chat-main__group-infor
-  %div.wrapper__chat-main__message-list
-  %div.wrapper__chat-main__message-form
+.wrapper__chat-main
+  .wrapper__chat-main__group-infor
+    %ul.wrapper__chat-main__group-infor__group-all
+      %li.wrapper__chat-main__group-infor__group-all__name test
+      %li.wrapper__chat-main__group-infor__group-all__member Member : masa
+    = link_to "Edit", "#", class: "wrapper__chat-main__group-infor__edit-btn"
+  .wrapper__chat-main__message-list
+  .wrapper__chat-main__message-for
