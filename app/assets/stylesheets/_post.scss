@@ -19,7 +19,6 @@
       &__top-items {
         width: 260px;
         height: 20px;
-        background-color: #333333;
         margin: 0 20px;
         display: flex;
         justify-content: space-between;
@@ -27,11 +26,21 @@
         &__name {
           width: calc(100% - 60px);
           height: 100%;
+          color: #ffffff;
         }
 
         &__icons {
           width: 60px;
           height: 100%;
+        }
+
+        &__btn--fa-pen-square {
+          color: #ffffff;
+          margin-right: 5px;
+        }
+
+        &__btn--fa-cog {
+          color: #ffffff;
         }
       }
     }
