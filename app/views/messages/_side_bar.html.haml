@@ -1,3 +1,10 @@
-%div.wrapper__side-bar
-  %div.wrapper__side-bar__user-name
-  %div.wrapper__side-bar__group-list
+.wrapper__side-bar
+  .wrapper__side-bar__user-name
+    .wrapper__side-bar__user-name__top-items 
+      .wrapper__side-bar__user-name__top-items__name masa
+      .wrapper__side-bar__user-name__top-items__icons
+      = link_to "#", class: "wrapper__side-bar__user-name__top-items__btn wrapper__side-bar__user-name__top-items__btn--fa-pen-square" do
+        = icon("fas", "pen-square", class: "wrapper__side-bar__user-name__top-items__btn--icon")
+      = link_to "#", class: "wrapper__side-bar__user-name__top-items__btn wrapper__side-bar__user-name__top-items__btn--fa-cog" do
+        = icon("fas", "cog", class: "wrapper__side-bar__user-name__top-items__btn--icon")
+  .wrapper__side-bar__group-list
