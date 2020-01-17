@@ -1,0 +1,22 @@
+.wrapper__chat-main
+  .wrapper__chat-main__group-infor
+    %ul.wrapper__chat-main__group-infor__group-all
+      %li.wrapper__chat-main__group-infor__group-all__name test
+      %li.wrapper__chat-main__group-infor__group-all__member Member : masa
+    = link_to "Edit", "#", class: "wrapper__chat-main__group-infor__edit-btn"
+  .wrapper__chat-main__message-list
+    .wrapper__chat-main__message-list__user-one
+      .wrapper__chat-main__message-list__user-one__user-name masa
+      .wrapper__chat-main__message-list__user-one__user-date 2019/11/20(Wed) 17:43:01
+    .wrapper__chat-main__message-list__text-one おはよう！
+    .wrapper__chat-main__message-list__user-two
+      .wrapper__chat-main__message-list__user-two__user-name masa
+      .wrapper__chat-main__message-list__user-two__user-date 2019/11/20(Wed) 17:43:34
+    .wrapper__chat-main__message-list__text-two 今日は夜から雨
+  .wrapper__chat-main__message-for
+    %div.wrapper__chat-main__message-for__text
+      %input.wrapper__chat-main__message-for__text__form{name: "message", placeholder: "type a message", type: "text", value: ""}
+      %label{class: "wrapper__chat-main__message-for__text__image"}
+        = icon("fas", "image")
+        %input{type: "file", style: "display:none"}
+    = link_to "Send", "#", class: "wrapper__chat-main__message-for__send-btn"
