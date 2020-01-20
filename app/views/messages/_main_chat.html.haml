@@ -1,9 +1,13 @@
 .wrapper__chat-main
   .wrapper__chat-main__group-infor
     %ul.wrapper__chat-main__group-infor__group-all
-      %li.wrapper__chat-main__group-infor__group-all__name test
-      %li.wrapper__chat-main__group-infor__group-all__member Member : masa
-    = link_to "Edit", "#", class: "wrapper__chat-main__group-infor__edit-btn"
+      %li.wrapper__chat-main__group-infor__group-all__name
+        = @group.name
+      %li.wrapper__chat-main__group-infor__group-all__member
+        Member:
+        - @group.users.each do |user|
+          = user.name
+    = link_to "Edit", edit_group_path(@group) , class: "wrapper__chat-main__group-infor__edit-btn"
   .wrapper__chat-main__message-list
     = render @messages
   = form_for [@group, @message], html: { class: "wrapper__chat-main__message-for" } do |f|
