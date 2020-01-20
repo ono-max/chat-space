@@ -1,7 +1,8 @@
 .wrapper__side-bar
   .wrapper__side-bar__user-name
     .wrapper__side-bar__user-name__top-items 
-      .wrapper__side-bar__user-name__top-items__name #{current_user.name}
+      .wrapper__side-bar__user-name__top-items__name
+        = current_user.name
       .wrapper__side-bar__user-name__top-items__icons
       = link_to new_group_path(current_user), class: "wrapper__side-bar__user-name__top-items__btn--fa-pen-square" do
         = icon("fas", "pen-square", class: "wrapper__side-bar__user-name__top-items__btn--icon")
@@ -9,5 +10,9 @@
         = icon("fas", "cog", class: "wrapper__side-bar__user-name__top-items__btn--icon")
   .wrapper__side-bar__group-list
     - current_user.groups.each do |group|
-      .wrapper__side-bar__group-list__top-items #{group.name}
-      .wrapper__side-bar__group-list__second-items メッセージはまだありません。
+      .wrapper__side-bar__groups-list__group
+        = link_to group_messages_path(group) do
+          .wrapper__side-bar__groups-list__group__top-items
+            = group.name
+          .wrapper__side-bar__groups-list__group__second-items 
+            = group.show_last_message

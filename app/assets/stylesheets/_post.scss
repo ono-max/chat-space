@@ -48,29 +48,33 @@ $color-gray2: #999999;
       }
     }
 
-    &__group-list {
+    &__groups-list {
       width: 300px;
       height: calc(100% - 100px);
       background-color: #2f3e51;
-      padding-top: 20px;
-
       font-weight: bold;
 
-      &__top-items {
-        color: $color-white;
-        height: 15px;
-        width: 260px;
-        margin: 0 20px;
-        line-height: 15px;
-      }
+      &__group {
+        width: 300px;
+        height: 51px;
+        padding-top: 20px;
 
-      &__second-items {
-        color: $color-white;
-        height: 11px;
-        width: 260px;
-        margin: 5px 20px 40px 20px;
-        font-size: 11px;
-        line-height: 11px;
+        &__top-items {
+          color: $color-white;
+          height: 15px;
+          width: 260px;
+          margin: 0 20px;
+          line-height: 15px;
+        }
+
+        &__second-items {
+          color: $color-white;
+          height: 11px;
+          width: 260px;
+          margin: 5px 20px 40px 20px;
+          font-size: 11px;
+          line-height: 11px;
+        }
       }
     }
   }
@@ -128,97 +132,81 @@ $color-gray2: #999999;
       width: 100%;
       height: calc(100% - 190px);
       background-color: #fafafa;
-      padding-left: 40px;
+      padding: 46px 40px;
 
-        &__user-one {
-          width: 100%;
-          padding-top: 35px;
+      &__user-one {
+        padding-bottom: 40px;
+
+        &__above {
+          margin-bottom: 10px;
           display: flex;
 
           &__user-name {
-            margin-right: 10px;
             font-size: 16px;
             color: $color-gray1;
           }
 
           &__user-date {
+            margin-left: 10px;
             font-size: 12px;
             color: $color-gray2;
           }
-
         }
 
         &__text-one {
           width: 100%;
-          margin-top: 12px;
           font-size: 14px;
           color: #434a54;
         }
-
-        &__user-two {
-          width: 100%;
-          margin-top: 46px;
-          display: flex;
-
-          &__user-name {
-            margin-right: 10px;
-            font-size: 16px;
-            color: $color-gray1;
-          }
-
-          &__user-date {
-            font-size: 12px;
-            color: $color-gray2;
-          }
-        }
-        &__text-two {
-          width: 100%;
-          margin-top: 12px;
-          font-size: 14px;
-          color: #434a54;
-        }
+      }
     }
 
     &__message-for {
       width: 100%;
       height: 90px;
       background-color: #d2d2d2;
+      padding: 20px 40px;
       display: flex;
-      align-items: center;
 
-      &__text {
-        width: 100%;
-        height: 50px;
-        background-color: $color-white;
-        margin: 0 15px 0 40px;
-        position: relative;
+      &__left-box {
         display: flex;
+        width: 100%;
 
-        &__form {
+        &__text {
+          background-color: $color-white;
           width: 100%;
-          height: 100%;
-          padding: 0px 40px 0px 10px;
+          height: 50px;
+          padding: 0 40px 0 10px;
         }
 
-        &__image {
-          font-size: 1.3em;
-          position: absolute;
-          top: 10px;
-          right: 10px;
+        &__box {
+          position: relative; 
 
+          &__form {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+  
+            &__image {
+              font-size: 1.3em;
+            }
+
+            &__hidden {
+              display: none;
+            }
           }
         }
-      
-
+      }
+  
       &__send-btn {
         color: $color-white;
-        width: 90px;
+        width: 100px;
         height: 50px;
         background-color: #3096fcfb;
-        margin-right: 40px;
-        font-size: large;
         text-align: center;
         line-height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
       }
     }
   }
