@@ -133,6 +133,7 @@ $color-gray2: #999999;
       height: calc(100% - 190px);
       background-color: #fafafa;
       padding: 46px 40px;
+      overflow: scroll;
 
       &__user-one {
         padding-bottom: 40px;
