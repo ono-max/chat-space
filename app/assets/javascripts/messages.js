@@ -20,7 +20,7 @@ $(function() {
       }
     })
     .fail(function() {
-      console.log("error");
+      alert("メッセージ送信に失敗しました")
     });
   }
   var buildHTML = function(message){
