@@ -1,11 +1,12 @@
-.wrapper__chat-main__message-list__user-one
+.wrapper__chat-main__message-list__user-one{data: {message: {id: message.id}}}
   .wrapper__chat-main__message-list__user-one__above
     .wrapper__chat-main__message-list__user-one__above__name 
       = message.user.name
     .wrapper__chat-main__message-list__user-one__above__user-date 
-      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      = DateTime.now
   .wrapper__chat-main__message-list__user-one__text-one
     - if message.content.present?
       %p.wrapper__chat-main__message-list__user-one__text-one__content
+      %div.message
         = message.content
     = image_tag message.image.url, class: "wrapper__chat-main__message-list__user-one__text-one__image" if message.image.present?
