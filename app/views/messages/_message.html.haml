@@ -7,5 +7,6 @@
   .wrapper__chat-main__message-list__user-one__text-one
     - if message.content.present?
       %p.wrapper__chat-main__message-list__user-one__text-one__content
-        = message.content
+        %div{data: {message: {id: message.id}}}
+          = message.content
     = image_tag message.image.url, class: "wrapper__chat-main__message-list__user-one__text-one__image" if message.image.present?
