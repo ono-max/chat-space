@@ -60,6 +60,7 @@ $(".wrapper__chat-main__message-for").on("submit", function(e) {
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました")
+      $(".wrapper__chat-main__message-for__send-btn").prop("disabled", false)
     })
   });
 });
